@@ -1,0 +1,19 @@
+{
+  "name": "chill_server",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clcuevas/chill_server.git"
+  },
+  "author": "Claudia Cuevas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clcuevas/chill_server/issues"
+  },
+  "homepage": "https://github.com/clcuevas/chill_server#readme"
+}
