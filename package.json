@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/clcuevas/chill_server/issues"
   },
-  "homepage": "https://github.com/clcuevas/chill_server#readme"
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.8.2"
+  }
 }
