@@ -4,6 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "dev": "./node_modules/.bin/nodemon server.js",
+    "mongod": "./node_modules/.bin/mongod --dbpath=./db",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
