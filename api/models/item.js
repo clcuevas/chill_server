@@ -1,7 +1,7 @@
 'use strict';
 
 let mongoose = require('mongoose');
-let Schema = mongoose.Schema;
+let { Schema } = mongoose;
 
 // TODO: Add more keys to the Item Schema
 let itemSchema = new Schema({
@@ -9,4 +9,5 @@ let itemSchema = new Schema({
   name: { type: String }
 });
 
+// Lets create the model and export it
 module.exports = mongoose.model('Item', itemSchema);

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "./node_modules/.bin/nodemon server.js",
     "mongod": "./node_modules/.bin/mongod --dbpath=./db",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --recursive api/test/**/**.test.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,10 @@
     "mongoose": "^4.11.0"
   },
   "devDependencies": {
+    "chai": "^4.0.2",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.4.2",
+    "mockgoose": "^7.3.3",
     "morgan": "^1.8.2"
   }
 }

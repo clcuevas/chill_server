@@ -8,7 +8,7 @@ let morgan = require('morgan');
 
 let mongoose = require('mongoose');
 // TODO: Setup a process.ENV for the MONGOLAB_URI
-mongoose.connect('mongodb://localhost/chill_dev');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/chill_dev');
 
 let itemRoutes = require('./api/routes/item_routes');
 
