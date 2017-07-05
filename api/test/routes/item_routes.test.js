@@ -28,7 +28,7 @@ describe('Item REST API endpoints', function() {
     let item1 = new Item({ author: 'Test', name: 'yep' });
     item1.save((error, data) => {
       if (error) {
-        return console.log(error);
+        return done(error);
       }
       // Assign item for testing purposes
       this.item = data;

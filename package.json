@@ -5,8 +5,10 @@
   "main": "server.js",
   "scripts": {
     "dev": "./node_modules/.bin/nodemon server.js",
+    "lint": "eslint api test server.js",
+    "mocha": "./node_modules/.bin/mocha --recursive api/test/**/**.test.js",
     "mongod": "./node_modules/.bin/mongod --dbpath=./db",
-    "test": "./node_modules/.bin/mocha --recursive api/test/**/**.test.js"
+    "test": "npm run lint && npm run mocha"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
   "devDependencies": {
     "chai": "^4.0.2",
     "chai-http": "^3.0.0",
+    "eslint": "^4.1.1",
     "mocha": "^3.4.2",
     "mockgoose": "^7.3.3",
     "morgan": "^1.8.2"

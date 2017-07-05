@@ -5,7 +5,7 @@ let Item = require('../models/item');
 //
 // Configure /items endpoints
 // =================================
-exports.getItems = (req, res) => {
+module.exports.getItems = (req, res) => {
   Item.find((error, items) => {
     if (error) {
       res.send(error);
@@ -15,7 +15,7 @@ exports.getItems = (req, res) => {
   });
 };
 
-exports.postItem = (req, res) => {
+module.exports.postItem = (req, res) => {
   let item = new Item();
 
   item.author = req.body.author;
@@ -34,7 +34,7 @@ exports.postItem = (req, res) => {
 //
 // Configure /items/:id endpoints
 // ================================
-exports.getItem = (req, res) => {
+module.exports.getItem = (req, res) => {
   Item.findById(req.params.id, (error, item) => {
     if (error) {
       res.send(error);
@@ -44,7 +44,7 @@ exports.getItem = (req, res) => {
   });
 };
 
-exports.putItem = (req, res) => {
+module.exports.putItem = (req, res) => {
   Item.findById(req.params.id, (error, item) => {
     if (error) {
       res.send(error);
@@ -64,10 +64,10 @@ exports.putItem = (req, res) => {
   });
 };
 
-exports.deleteItem = (req, res) => {
+module.exports.deleteItem = (req, res) => {
   Item.remove({
     _id: req.params.id
-  }, (error, item) => {
+  }, (error) => {
     if (error) {
       res.send(error);
     }

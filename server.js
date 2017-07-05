@@ -16,7 +16,7 @@ let itemRoutes = require('./api/routes/item_routes');
 // Configure the app to use the below headers/ access
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE');
   next();
 });
@@ -32,6 +32,7 @@ let port = process.env.PORT || 8080;
 //
 // ROUTES FOR THE API
 // =================================
+// eslint-disable-next-line new-cap
 let router = express.Router();
 
 // TODO: Lock down these routes
@@ -58,4 +59,5 @@ app.use('/api', router);
 // START THE SERVER
 // =================================
 app.listen(port);
+// eslint-disable-next-line no-console
 console.log(`Server running on PORT ${port}`);
