@@ -45,7 +45,10 @@ describe('Item REST API endpoints', function() {
     mockgoose.prepareStorage().then(() => {
       mockgoose.helper.reset().then(() => {
         mongoose.connection.db.dropDatabase((error) => {
-          return done();
+          if (error) {
+            done(error);
+          }
+          done();
         });
       });
     });
