@@ -36,6 +36,8 @@ describe('Item REST API endpoints', function() {
 
     let item2 = new Item({ author: 'Your mom', name: 'whoa' });
     item2.save();
+
+    done();
   });
 
   after(function(done) {
