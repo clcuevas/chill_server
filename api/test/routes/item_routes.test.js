@@ -36,21 +36,14 @@ describe('Item REST API endpoints', function() {
 
     let item2 = new Item({ author: 'Your mom', name: 'whoa' });
     item2.save();
-    
+
     done();
   });
 
   after(function(done) {
     // Disconnect the database after each test
-    mockgoose.prepareStorage().then(() => {
-      mockgoose.helper.reset().then(() => {
-        mongoose.connection.db.dropDatabase((error) => {
-          if (error) {
-            done(error);
-          }
-          done();
-        });
-      });
+    mockgoose.helper.reset().then(() => {
+       done();
     });
   });
 
