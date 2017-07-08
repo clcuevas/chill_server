@@ -43,7 +43,7 @@ describe('Item REST API endpoints', function() {
   after(function(done) {
     // Disconnect the database after each test
     mockgoose.helper.reset().then(() => {
-       done();
+      done();
     });
   });
 
