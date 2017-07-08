@@ -32,11 +32,12 @@ describe('Item REST API endpoints', function() {
       }
       // Assign item for testing purposes
       this.item = data;
-      done();
     });
 
     let item2 = new Item({ author: 'Your mom', name: 'whoa' });
-    item2.save((error, data) => done());
+    item2.save();
+    
+    done();
   });
 
   after(function(done) {
